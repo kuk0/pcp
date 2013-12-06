@@ -1,0 +1,104 @@
+
+/*body {
+    font: 1em/1.3 Lora, serif;
+    color: #555;
+    margin: 3em 5em;
+}*/
+.problem {
+    clear: both;
+    margin-bottom: 3em;
+}
+table.input-tiles {
+    border-collapse: collapse;
+    /* 'cellspacing' equivalent */
+    border-spacing: 0px;
+    text-align: center;
+    margin: auto;
+}
+tr.spacer {
+    height: 10px;
+}
+.dnamecell {
+    text-align: center;
+    margin: 10px;
+}
+.dname {
+    font-size: 60%;
+}
+.bmono {
+    font-family: monospace;
+    font-weight: bold;
+}
+.maybe {
+    font-weight: normal;
+    color: #aaa;
+}
+.mismatch {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+}
+td.input-tile {
+    border: 1px solid black;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 2px 5px 1px 5px;
+    vertical-align: bottom;
+}
+.top,
+.bottom {
+    /*width: 300px;*/
+    overflow: hidden;
+    border-spacing: 0px;
+}
+.soln {
+    display: table-cell;
+    vertical-align: bottom;
+}
+#baf td.input-tile,
+#baf .soln {
+    height: 25px;
+}
+#palin td.input-tile,
+#palin .soln {
+    height: 27px;
+}
+#div td.input-tile,
+#div .soln {
+    height: 25px;
+}
+.rvec:after {
+    content: "→";
+    margin-left: -.55em;
+    vertical-align: .5em;
+}
+.lvec:after {
+    content: "←";
+    margin-left: -.55em;
+    vertical-align: .5em;
+}
+.a:after {
+    content: "a";
+    margin-left: -.55em;
+    vertical-align: .7em;
+}
+.b:after {
+    content: "b";
+    margin-left: -.55em;
+    vertical-align: .7em;
+}
+.crossed:after {
+    content: "/";
+    margin-left: -.6em;
+    /*vertical-align : .5em;*/
+}
+.undero:after {
+    content: "o";
+    margin-left: -.55em;
+    vertical-align: -.7em;
+}
+.undere:after {
+    content: "e";
+    margin-left: -.55em;
+    vertical-align: -.7em;
+}
