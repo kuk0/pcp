@@ -194,6 +194,18 @@
             soln: [2, 0, 0, 2, 0, 2, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 1, 2, 0, 1, 0, 0, 1, 1, 2, 0, 1, 0, 1, 1, 2, 0, 0, 0, 1, 2, 0, 2, 0, 1, 1, 2, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, ]
         }).create();
 
+        var hard1 = new Pcp({
+            id: "hard1",
+            title: "Hard (1<sup>st</sup> place)",
+            text: 'This is <em>the hardest</em> PCP with 3 tiles and words of length &leq;3 over a binary alphabet. The shortest solution has length 75(!) and was found by computer search. See a list of other <a href="http://webdocs.cs.ualberta.ca/~games/PCP/list.htm">hard PCP instances</a>.',
+            tiles: [
+                ["1.", "abb", "a", "#f7f7f7"],
+                ["2.", "b", "abb", "#bdbdbd"],
+                ["3.", "a", "b", "#d9d9d9"]
+            ],
+            // soln: []
+        }).create();
+
         var counter = new Pcp({
             id: "counter",
             title: "Let's count",

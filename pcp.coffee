@@ -44,7 +44,7 @@ class Pcp
         if !(@start?) or @start < 0 or @start > @tiles.length
             @start = -1
         @seq = []
-        @soln = spec.soln or []
+        @soln = spec.soln
         @stopper = spec.stopper
         @ts = "" # top string
         @bs = "" # bottom string
@@ -166,9 +166,10 @@ class Pcp
         buttons = $('<div/>')
         $('<input type="button" value="undo">').click(() => @undo()).appendTo(buttons)
         $('<input type="button" value="restart">').click(() => @restart()).appendTo(buttons)
-        $('<input type="button" value="hint">').click(() => @hint()).appendTo(buttons)
-        if @stopper?
-            $('<input type="button" value="hint++">').click(() => @hint2()).appendTo(buttons)
+        if @soln?
+            $('<input type="button" value="hint">').click(() => @hint()).appendTo(buttons)
+            if @stopper?
+                $('<input type="button" value="hint++">').click(() => @hint2()).appendTo(buttons)
 
         # AREA FOR SOLUTION   # width: 500px;
         #@sol = $("""
