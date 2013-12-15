@@ -7,30 +7,47 @@ PL = '<span class="lvec">' + WP + '</span>' # left
 WPA = '<span class="rvec a">' + WP + '</span>' # right
 WPB = '<span class="rvec b">' + WP + '</span>' # right
 
+class ParallelRows
+    constructor: (div, max) ->
+        @div = div
+        @max = max # max number of items in one row
+        @r = [0, 1] # top/bottom row
+        @c = [0, 0] # top/bottom column
+        @rows = [] # html elements
+        @_newRows()
+
+    _newRows: () ->
+        t = $('<div class="top-row" />')
+        b = $('<div class="bot-row" />')
+        @rows.push(t, b)
+        @div.append(t, b)
+
+    _appendItem: (item, where) ->
+        @rows[@r[where]].append(item)
+        if ++@c[where] >= @max
+            @c[where] = 0
+            @r[where] += 2
+            if @r[where] >= @rows.length
+                @_newRows()
+
+    append: (top, bot) ->
+        @_appendItem(item, 0) for item in top
+        @_appendItem(item, 1) for item in bot
+
 class Pcp
     constructor: (spec) ->
         {@id, @tiles} = spec
         @title = spec.title or ""
         @text = spec.text or ""
-        @map = spec.map or {}
-        @start = spec.start or -1
-        if @start < 0 or @start > @tiles.length
+        @map = spec.map or {}  # we can map symbols into more complicated symbols (unicode, img,...)
+        @start = spec.start
+        if !(@start?) or @start < 0 or @start > @tiles.length
             @start = -1
         @seq = []
         @soln = spec.soln or []
-        @stopper = spec.stopper or []
+        @stopper = spec.stopper
         @ts = "" # top string
         @bs = "" # bottom string
-
-    #     id: spec.id;
-    #     title: spec.title or "PCP instance",
-    #     text: spec.text or "",
-    #     tiles: spec.tiles,
-    #     map: undefined, # we can map symbols into more complicated symbols (unicode, img,...)
-    #     mtiles: undefined, # maped tiles - top and bottom
-    #     start: spec.start or -1,
-    #     soln: spec.soln;
-    #     stopper: spec.stopper or [],
 
     mapstr: (s) ->
         M = @map
@@ -47,8 +64,8 @@ class Pcp
         @possible()
 
     restart: ->
-        @top.empty
-        @bot.empty
+        @top.empty()
+        @bot.empty()
         @seq = []
         @ts = ""
         @bs = ""
@@ -79,16 +96,17 @@ class Pcp
             # @hide
             @ts += t
             @bs += b
+            #@pr.append(@mtiles[i][0], @mtiles[i][1])
             @top.append(@mtiles[i][0])
             @bot.append(@mtiles[i][1])
             sum = 0
-            @top.children().each(() -> sum += $(@).outerWidth())
+            # @top.children().each(() -> sum += $(@).outerWidth())
             #`@top.children().each(function () { sum += $(this).outerWidth() })`
-            @top.scrollLeft(sum)
-            @bot.scrollLeft(sum)
+            # @top.scrollLeft(sum)
+            # @bot.scrollLeft(sum)
             @seq.push(i)
             if @ts.length == @bs.length
-                alert('Congratulations, you found a solution of length ' + @seq.length + ".\n" + @seq)
+                alert('Congratulations, you found a solution of length ' + @seq.length + '.')  # + ".\n" + @seq)
         else
             alert('Mismatch')
         @possible()
@@ -102,12 +120,12 @@ class Pcp
 
     create: ->
         n = @tiles.length
-        MAX = 10 # max number of tiles in a row
+        MAX = 10  # max number of tiles in a row
 
         # INIT (MAP TILES)
-        @mtiles = []
+        @mtiles = []  # maped tiles - top and bottom
         for t in @tiles
-            @mtiles.push([
+            @mtiles.push([ #[@mapstr(t[1]), @mapstr(t[2])
                 "<span class='soln' style='background-color: " + t[3] + "'>" + @mapstr(t[1]) + "</span>",
                 "<span class='soln' style='background-color: " + t[3] + "'>" + @mapstr(t[2]) + "</span>"
             ])
@@ -117,7 +135,6 @@ class Pcp
         # TITLE & TEXT
         if @text != ""
             e.append("<p>#{@text}</p>")
-        #return
 
         div = $('<div style=\"overflow: auto;\"></div>')
         input = $('<div></div>') # style=\"width:250px; float: left;\"
@@ -150,10 +167,15 @@ class Pcp
         $('<input type="button" value="undo">').click(() => @undo()).appendTo(buttons)
         $('<input type="button" value="restart">').click(() => @restart()).appendTo(buttons)
         $('<input type="button" value="hint">').click(() => @hint()).appendTo(buttons)
-        if @stopper
+        if @stopper?
             $('<input type="button" value="hint++">').click(() => @hint2()).appendTo(buttons)
 
         # AREA FOR SOLUTION   # width: 500px;
+        #@sol = $("""
+        #    <div class="sol" style="float: left;">
+        #    </div>
+        #""")
+        #@pr = new ParallelRows(@sol, 5)
         sol = $("""
             <div class="sol" style="float: left;">
                 <table border="0">
@@ -175,5 +197,5 @@ class Pcp
         div.append(input, sol)
         e.append(div)
 
-        @possible()
+        @restart()
         #<!--input type="button" onClick="answer(\"id\", "+a+");" value="answer"-->

@@ -102,3 +102,10 @@ td.input-tile {
     margin-left: -.55em;
     vertical-align: -.7em;
 }
+
+
+@media print {
+    td.dnamecell, input[type="button"] {
+        display: none;
+    }
+}

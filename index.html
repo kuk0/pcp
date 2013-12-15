@@ -1,404 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Post correspondence problem</title>
+    <title>Post correspondence problem</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="pcp.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap-yeti.css" rel="stylesheet">
+    <link href="pcp.css" rel="stylesheet">
 
-  <!-- Add custom CSS here -->
-  <style>
-  body {margin-top: 60px;}
-  </style>
+    <!-- Add custom CSS here -->
+    <style>
+        body {
+            margin-top: 60px;
+        }
+    </style>
 
 </head>
 
 <body>
 
-  <nav class="navbar  navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!--div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!a class="navbar-brand" href="index.php">PCP</a>
-        </div-->
+    <div id="test"></div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#easy">Easy instances</a></li>
-            <li><a href="#hard">Hard instances</a></li>
-            <li><a href="#undecidable">Undecidability</a></li>
-            <li><a href="#turing">PCP and Turing machines</a></li>
-            <li><a href="#ram">PCP and RAMs</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!--li><a href="#intro">Introduction</a></li-->
+                    <li><a href="#easy">Easy instances</a>
+                    </li>
+                    <li><a href="#hard">Hard instances</a>
+                    </li>
+                    <!--li><a href="#undecidable">Undecidability</a></li-->
+                    <li><a href="#turing">PCP and Turing machines</a>
+                    </li>
+                    <li><a href="#ram">PCP and RAMs</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
     <div class="container">
 
-      <div class="row col-md-12">
-        <a id="intro"></a><h1 class="page-header">Introduction</h1>
+        <div class="row col-md-12">
+            <!--a id="intro"></a><h1 class="page-header">Introduction</h1>
         <p>
           The Post correspondence problem is an undecidable decision problem that was introduced by Emil Post in 1946. Because it is simpler than the halting problem and the Entscheidungsproblem it is often used in proofs of undecidability.
 
           Consider the following puzzle:
           You are given a set of tiles
 
-        </p>
+        </p-->
 
 
-        <a id="easy"></a><h1 class="page-header">Easy instances</h1>
+            <a id="easy"></a>
+            <h1 class="page-header">Easy instances</h1>
 
-        <div class="problem" id="easy1"></div>
-        <div class="problem" id="easy2"></div>
-        <div class="problem" id="easy3"></div>
-        <div class="problem" id="easy4"></div>
-        <div class="problem" id="easy5"></div>
+            <div class="problem" id="easy1"></div>
+            <div class="problem" id="easy2"></div>
+            <div class="problem" id="easy3"></div>
+            <div class="problem" id="easy4"></div>
+            <div class="problem" id="easy5"></div>
 
-        <a id="hard"></a><h1 class="page-header">Hard instances</h1>
-        <p>
+            <a id="hard"></a>
+            <h1 class="page-header">Hard instances</h1>
+            <!--p>
+        </p-->
 
+            <div class="problem" id="hard3"></div>
+            <div class="problem" id="hard2"></div>
+            <div class="problem" id="hard1"></div>
 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque posuere convallis orci eget vulputate. Maecenas fringilla purus a augue malesuada tincidunt quis in orci. Pellentesque euismod, dui ut mollis lobortis, risus tellus porta sapien, sit amet imperdiet erat magna nec arcu. Pellentesque consequat sodales arcu, quis ullamcorper odio pulvinar at. In vitae tellus suscipit, sodales libero a, iaculis neque. Etiam blandit ipsum sem, at rhoncus massa posuere at. Aliquam erat volutpat. Vestibulum sem lacus, tristique et turpis in, dapibus blandit magna.
+            <!--a id="undecidable"></a><h1 class="page-header">Undecidability</h1-->
 
-          Suspendisse nec volutpat odio. Vivamus sodales eu erat id malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas arcu nisl, luctus nec mollis nec, vestibulum non metus. Quisque ipsum diam, aliquam volutpat hendrerit eu, suscipit vel turpis. Curabitur nulla quam, malesuada sit amet consectetur quis, pulvinar vel lacus. Proin ac lorem ultricies, tincidunt justo sit amet, imperdiet est. Donec ante nunc, mattis in ipsum in, bibendum tincidunt felis. Praesent bibendum eget dolor vel dignissim. Curabitur cursus egestas turpis. Phasellus tristique pharetra felis, in pharetra nisi imperdiet vitae. Aliquam egestas malesuada arcu nec rutrum. Quisque condimentum dolor vel magna vehicula consectetur. Sed ut convallis quam. Donec ultricies enim in dolor rhoncus, id tempus justo semper.
+            <a id="turing"></a>
+            <h1 class="page-header">PCP and Turing machines</h1>
 
-          Donec magna nibh, posuere et ligula id, luctus accumsan sem. Cras posuere quam augue, consequat auctor nunc ultrices sit amet. Mauris consectetur tincidunt urna, eget mollis augue bibendum nec. Integer suscipit metus sit amet neque accumsan, vel bibendum purus vehicula. Suspendisse tortor turpis, scelerisque ac massa eu, condimentum iaculis lectus. Praesent est ligula, consequat sed orci ut, sodales tristique tellus. Nullam vitae velit vel nibh condimentum consectetur in et justo. Nullam dictum dolor non metus tempus rhoncus. Duis fermentum tellus sed erat ullamcorper viverra. Sed sit amet elit erat. Vestibulum ultrices sodales nisi id placerat. Pellentesque hendrerit tortor id dolor scelerisque, a tincidunt magna sollicitudin. Mauris porta dolor eu ullamcorper convallis. Morbi convallis mauris at lectus aliquet, vitae facilisis est auctor. Nam sagittis malesuada semper. Ut in orci convallis, lobortis purus vitae, iaculis est.
-
-          Mauris elementum pharetra eros id tincidunt. Morbi in fringilla odio. Donec ac turpis odio. Curabitur quis faucibus metus. Proin purus lacus, tristique eget posuere quis, feugiat vitae tellus. Aliquam erat volutpat. Ut pellentesque leo massa, eu auctor metus vehicula nec. Ut et velit eu erat hendrerit vestibulum in eget nunc. Fusce posuere risus id lectus tempor, at eleifend arcu hendrerit. Donec suscipit lacinia tellus ut elementum.
-
-          In sit amet lorem sed lectus varius laoreet. Suspendisse luctus tincidunt nibh, sit amet feugiat quam. Curabitur ante massa, bibendum sed tempor ac, tempor malesuada magna. Phasellus hendrerit tempus mauris at lacinia. Sed eget sapien at mi auctor placerat vitae vel urna. Quisque nec tortor blandit, eleifend diam eget, varius ipsum. Curabitur massa enim, pellentesque vitae ullamcorper a, auctor at lorem. Cras arcu nibh, congue a massa a, posuere consectetur magna. Nullam purus lorem, accumsan quis feugiat a, aliquam convallis quam. Maecenas lobortis rhoncus interdum. Pellentesque justo orci, porttitor vitae mauris non, adipiscing suscipit orci. Donec eget eros ut eros scelerisque sollicitudin.
-        </p>
-
-                <div class="problem" id="hard1"></div>
-
-        <a id="undecidable"></a><h1 class="page-header">Undecidability</h1>
-
-        <a id="turing"></a><h1 class="page-header">PCP and Turing machines</h1>
-
-        <div class="problem" id="baf"></div>
-        <div class="problem" id="palin"></div>
-        <div class="problem" id="div"></div>
+            <div class="problem" id="baf"></div>
+            <div class="problem" id="palin"></div>
+            <div class="problem" id="div"></div>
 
 
 
-        <a name="ram"></a><h1 class="page-header">PCP and RAMs</h1>
-        <div class="problem" id="counter"></div>
-        <div class="problem" id="power"></div>
-        <div class="problem" id="parity"></div>
-        <div class="problem" id="collatz"></div>
+            <a name="ram"></a>
+            <h1 class="page-header">PCP and RAMs</h1>
+            <div class="problem" id="counter"></div>
+            <div class="problem" id="power"></div>
+            <div class="problem" id="parity"></div>
+            <div class="problem" id="collatz"></div>
 
-      </div>
+        </div>
 
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="pcp2.js"></script>
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="pcp.js"></script>
     <script>
         var easy1 = new Pcp({
-          id: "easy1",
-          title: "Easy #1",
-          text: "This PCP is trivial since every move is forced.",
-          tiles: [
-            ["1.", "abc", "ab", "#ffdd55"],
-            ["2.", "aca", "ca", "#aaffaa"],
-            ["3.", "b", "acab", "#ff00ff"]
-          ],
-          soln: [0, 1, 1, 2]
+            id: "easy1",
+            title: "Easy #1",
+            text: "This PCP is trivial since every move is forced.",
+            tiles: [
+                ["1.", "abc", "ab", "#ffffb2"], // "#ffdd55"],
+                ["2.", "aca", "ca", "#fed976"], // "#aaffaa"],
+                ["3.", "b", "acab", "#feb24c"], //ff00ff"]
+            ],
+            soln: [0, 1, 1, 2]
         }).create();
 
         var easy2 = new Pcp({
-          id: "easy2",
-          title: "Easy #2",
-          text: "An easy PCP with solution of length 4",
-          tiles: [
-            ["1.", "a", "baa", "#ffdd55"],
-            ["2.", "ab", "aa", "#aaffaa"],
-            ["3.", "bba", "bb", "#ff00ff"]
-          ],
-          soln: [2, 1, 2, 0]
+            id: "easy2",
+            title: "Easy #2",
+            text: "An easy PCP with solution of length 4",
+            tiles: [
+                ["1.", "a", "baa", "#a1d99b"],
+                ["2.", "ab", "aa", "#c7e9c0"],
+                ["3.", "bba", "bb", "#edf8e9"]
+            ],
+            soln: [2, 1, 2, 0]
         }).create();
 
         var easy3 = new Pcp({
-          id: "easy3",
-          title: "Easy #3",
-          text: "An easy PCP with solution of length 5",
-          tiles: [
-            ["1.", "bab", "a", "#ffdd55"],
-            ["2.", "a", "aba", "#aaffaa"],
-            ["3.", "ab", "b", "#ff00ff"],
-            ["4.", "ba", "b", "#00ffff"]
-          ],
-          soln: [1, 3, 0, 2, 1]
+            id: "easy3",
+            title: "Easy #3",
+            text: "An easy PCP with solution of length 5",
+            tiles: [
+                ["1.", "bab", "a", "#f1eef6"],
+                ["2.", "a", "aba", "#d0d1e6"],
+                ["3.", "ab", "b", "#a6bddb"],
+                ["4.", "ba", "b", "#74a9cf"]
+            ],
+            soln: [1, 3, 0, 2, 1]
         }).create();
 
 
         var easy4 = new Pcp({
-          id: "easy4",
-          title: "Easy #4",
-          text: "An easy PCP with solution of length 6",
-          tiles: [
-            ["1.", "ab", "a", "#ffdd55"],
-            ["2.", "bbaaba", "a", "#aaffaa"],
-            ["3.", "b", "bbbb", "#ff00ff"],
-            ["4.", "bb", "ab", "#0ff"]
-          ],
-          soln: [0, 2, 1, 3, 3, 2]
+            id: "easy4",
+            title: "Easy #4",
+            text: "An easy PCP with solution of length 6",
+            tiles: [
+                ["1.", "ab", "a", "#f768a1"],
+                ["2.", "bbaaba", "a", "#fa9fb5"],
+                ["3.", "b", "bbbb", "#fcc5c0"],
+                ["4.", "bb", "ab", "#feebe2"]
+            ],
+            soln: [0, 2, 1, 3, 3, 2]
         }).create();
 
         var easy5 = new Pcp({
-          id: "easy5",
-          title: "Easy #5",
-          text: "(There is a solution of length 7.)",
-          tiles: [
-            ["1.", "baa", "b", "#ffdd55"],
-            ["2.", "a", "baa", "#aaffaa"],
-            ["3.", "b", "aa", "#ff00ff"]
-          ],
-          soln: [0, 2, 0, 0, 2, 1, 1]
+            id: "easy5",
+            title: "Easy #5",
+            text: "(There is a solution of length 7.)",
+            tiles: [
+                ["1.", "baa", "b", "#ffffcc"],
+                ["2.", "a", "baa", "#41b6c4"],
+                ["3.", "b", "aa", "#a1dab4"]
+            ],
+            soln: [0, 2, 0, 0, 2, 1, 1]
         }).create();
 
-        var hard1 = new Pcp({
-          id: "hard1",
-          title: "Hard",
-          text: 'This is one of the hardest PCPs with 3 tiles and words of length &leq;3 over a binary alphabet. The shortest solution has length 44(!) and was found by computer search. See a list of other <a href="http://webdocs.cs.ualberta.ca/~games/PCP/list.htm">hard PCP instances</a>.',
-          tiles: [
-            ["1.", "a", "b", "#ffdd55"],
-            ["2.", "ab", "a", "#aaffaa"],
-            ["3.", "b", "bab", "#ff00ff"]
-          ],
-          soln: [1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 2, 1, 1, 2, 2, 1, 0, 0, 2, 1, 1, 0, 1, 2, 1, 1, 0, 0, 1, 2, 1, 1, 1, 0, 2, 1, 2, 1, 2, 2, 0, 2]
+        var hard3 = new Pcp({
+            id: "hard3",
+            title: "Hard (3<sup>rd</sup> place)",
+            text: 'This is one of the hardest PCPs with 3 tiles and words of length &leq;3 over a binary alphabet. The shortest solution has length 44(!) and was found by computer search. See a list of other <a href="http://webdocs.cs.ualberta.ca/~games/PCP/list.htm">hard PCP instances</a>.',
+            tiles: [
+                ["1.", "a", "b", "#f7f7f7"],
+                ["2.", "ab", "a", "#d9d9d9"],
+                ["3.", "b", "bab", "#bdbdbd"]
+            ],
+            soln: [1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 2, 1, 1, 2, 2, 1, 0, 0, 2, 1, 1, 0, 1, 2, 1, 1, 0, 0, 1, 2, 1, 1, 1, 0, 2, 1, 2, 1, 2, 2, 0, 2]
+        }).create();
+
+        var hard2 = new Pcp({
+            id: "hard2",
+            title: "Hard (2<sup>nd</sup> place)",
+            text: 'This is one of the hardest PCPs with 3 tiles and words of length &leq;3 over a binary alphabet. The shortest solution has length 55(!) and was found by computer search. See a list of other <a href="http://webdocs.cs.ualberta.ca/~games/PCP/list.htm">hard PCP instances</a>.',
+            tiles: [
+                ["1.", "ab", "b", "#bdbdbd"],
+                ["2.", "b", "abb", "#d9d9d9"],
+                ["3.", "abb", "a", "#f7f7f7"]
+            ],
+            soln: [2, 0, 0, 2, 0, 2, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 1, 2, 0, 1, 0, 0, 1, 1, 2, 0, 1, 0, 1, 1, 2, 0, 0, 0, 1, 2, 0, 2, 0, 1, 1, 2, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, ]
         }).create();
 
         var counter = new Pcp({
-          id: "counter",
-          title: "Let's count",
-          text: "This PCP simulates counting to 7.",
-          tiles: [
-            ["start", "#", "##", "#ffdd55"],
-            ["copy", "x", "x", "#aaffaa"],
-            ["+1", "#", "x#", "#ff00ff"],
-            ["7", "xxxxxxx#$", "$", "#00ffff"]
-          ],
-          start: 0,
-          soln: [0, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 3]
+            id: "counter",
+            title: "Let's count",
+            text: "This PCP simulates counting to 7.",
+            tiles: [
+                ["start", "#", "##", "#feb24c"],
+                ["copy", "x", "x", "#fed976"],
+                ["+1", "#", "x#", "#ffeda0"],
+                ["7", "xxxxxxx#$", "$", "#ffffcc"]
+            ],
+            start: 0,
+            soln: [0, 2, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 3]
+        }).create();
+
+        var power = new Pcp({
+            id: "power",
+            title: "Power of 2",
+            text: "Keep dividing by 2 to check the number of <em>x</em>'s at the beginning is 2<sup><em>k</em></sup>.",
+            tiles: [
+                ["start", "#", "#xxxxxxxxxxxxxxxx#", "#f6eff7"],
+                ["copy", "#", "#", "#d0d1e6"],
+                ["div", "xx", "x", "#a6bddb"],
+                ["finish", "#x#", "#", "#67a9cf"]
+            ],
+            //  map: {"p": "p"};
+            start: 0,
+            soln: [0, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 3]
+            //[0,1,2,2,3,5,6,6,6,7,1,3,5,6,7,4,5,7,8], pre 4
         }).create();
 
         var parity = new Pcp({
-          id: "parity",
-          title: "Parity",
-          text: "", // "3 &rarr; 10 &rarr; 5 &rarr; 16 &rarr; 8 &rarr; 4 &rarr; 2 &rarr; 1",
-          tiles: [
-            ["start", "", "#xxxxxxxxx#", "#fd5"],
-            ["even1", "#xx", "#Pp", "#afa"],
-            ["even2", "xx", "Pp", "#8f8"],
-            ["even3", "xx#", "Pp#", "#6f6"],
-            ["even4", "#xx#", "#Pp#", "#4f4"],
-            ["odd1", "#xx", "#Nn", "#f0f"],
-            ["odd2", "xx", "Nn", "#e0e"],
-            ["odd3", "x#", "N#", "#d0d"],
-            ["check1e", "#P", "#e", "#0ff"],
-            ["check2e", "pP", "ee", "#0ee"],
-            ["check3e", "p#", "e#", "#0dd"],
-            ["check1o", "#N", "#o", "#ff0"],
-            ["check2o", "nN", "oo", "#ee0"],
-            ["check3o", "nN#", "oo#", "#dd0"],
-            ["finish#", "#", "", "#ffffff"],
-            ["finishe", "e", "", "#ffffff"],
-            ["finisho", "o", "", "#ffffff"]
-          ],
-          map: {
-            'P': 'E',
-            'p': 'e',
-            'N': 'O',
-            'n': 'o',
-            'e': '<span class="undere">x</span>',
-            'o': '<span class="undero">x</span>'
-          },
-          start: 0,
-          soln: [0, 5, 6, 6, 6, 7, 11, 12, 12, 12, 13, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16, 14]
-         //  stopper: [],
+            id: "parity",
+            title: "Parity",
+            text: "", // "3 &rarr; 10 &rarr; 5 &rarr; 16 &rarr; 8 &rarr; 4 &rarr; 2 &rarr; 1",
+            tiles: [
+                ["start", "", "#xxxxxxxxx#", "#f7fcfd"],
+                ["even1", "#xx", "#Pp", "#d9f0a3"],
+                ["even2", "xx", "Pp", "#d9f0a3"],
+                ["even3", "xx#", "Pp#", "#d9f0a3"],
+                ["even4", "#xx#", "#Pp#", "#d9f0a3"],
+                ["odd1", "#xx", "#Nn", "#fed976"],
+                ["odd2", "xx", "Nn", "#fed976"],
+                ["odd3", "x#", "N#", "#fed976"],
+                ["check1e", "#P", "#e", "#addd8e"],
+                ["check2e", "pP", "ee", "#addd8e"],
+                ["check3e", "p#", "e#", "#addd8e"],
+                ["check1o", "#N", "#o", "#feb24c"],
+                ["check2o", "nN", "oo", "#feb24c"],
+                ["check3o", "nN#", "oo#", "#feb24c"],
+                ["finish#", "#", "", "#f7fcfd"],
+                ["finishe", "e", "", "#f7fcfd"],
+                ["finisho", "o", "", "#f7fcfd"]
+            ],
+            map: {
+                'P': 'E',
+                'p': 'e',
+                'N': 'O',
+                'n': 'o',
+                'e': '<span class="undere">x</span>',
+                'o': '<span class="undero">x</span>'
+            },
+            start: 0,
+            soln: [0, 5, 6, 6, 6, 7, 11, 12, 12, 12, 13, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16, 14]
+            //  stopper: [],
         }).create();
 
 
         var collatz = new Pcp({
-          id: "collatz",
-          title: "3<em>n</em> + 1",
-          text: "Have you heard about the 3<em>n</em>+1 sequence (also known as Collatz or Ulam sequence)? Hint: 3 &rarr; 10 &rarr; 5 &rarr; 16 &rarr; 8 &rarr; 4 &rarr; 2 &rarr; 1.",
-          tiles: [
-            ["start", "", "#xxx#", "#fd5"],
-            ["even1", "#xx", "#Pp", "#afa"],
-            ["even2", "xx", "Pp", "#8f8"],
-            ["even3", "xx#", "Pp#", "#6f6"],
-            ["even4", "#xx#", "#Pp#", "#4f4"],
-            ["odd1", "#xx", "#Nn", "#f0f"],
-            ["odd2", "xx", "Nn", "#e0e"],
-            ["odd3", "x#", "N#", "#d0d"],
-            ["div1", "#P", "#", "#0ff"],
-            ["div2", "pP", "x", "#0ee"],
-            ["div3", "p#", "x#", "#0dd"],
-            ["mul1", "#N", "#xxxx", "#ff0"],
-            ["mul2", "nN", "xxxxxx", "#ee0"],
-            ["mul3", "nN#", "xxxxxx#", "#dd0"],
-            ["finish", "#x#", "", "#ffffff"]
-          ],
-          map: {
-            'P': 'E',
-            'p': 'e',
-            'N': 'O',
-            'n': 'o'
-          },
-          start: 0,
-          soln: [0, 5, 7, 11, 13, 1, 2, 2, 2, 3, 8, 9, 9, 9, 9, 10, 5, 6, 7, 11, 12, 13, 1, 2, 2, 2, 2, 2, 2, 3, 8, 9, 9, 9, 9, 9, 9, 9, 10, 1, 2, 2, 3, 8, 9, 9, 9, 10, 1, 3, 8, 9, 10, 4, 8, 10, 14],
-          stopper: [3, 4, 7, 10, 13, 14]
+            id: "collatz",
+            title: "3<em>n</em> + 1",
+            text: "Have you heard about the 3<em>n</em>+1 sequence (also known as Collatz or Ulam sequence)? Hint: 3 &rarr; 10 &rarr; 5 &rarr; 16 &rarr; 8 &rarr; 4 &rarr; 2 &rarr; 1.",
+            tiles: [
+                ["start", "", "#xxx#", "#f7fcfd"],
+                ["even1", "#xx", "#Pp", "#d9f0a3"],
+                ["even2", "xx", "Pp", "#d9f0a3"],
+                ["even3", "xx#", "Pp#", "#d9f0a3"],
+                ["even4", "#xx#", "#Pp#", "#d9f0a3"],
+                ["odd1", "#xx", "#Nn", "#fed976"],
+                ["odd2", "xx", "Nn", "#fed976"],
+                ["odd3", "x#", "N#", "#fed976"],
+                ["div1", "#P", "#", "#addd8e"],
+                ["div2", "pP", "x", "#addd8e"],
+                ["div3", "p#", "x#", "#addd8e"],
+                ["mul1", "#N", "#xxxx", "#feb24c"],
+                ["mul2", "nN", "xxxxxx", "#feb24c"],
+                ["mul3", "nN#", "xxxxxx#", "#feb24c"],
+                ["finish", "#x#", "", "#f7fcfd"]
+            ],
+            map: {
+                'P': 'E',
+                'p': 'e',
+                'N': 'O',
+                'n': 'o'
+            },
+            start: 0,
+            soln: [0, 5, 7, 11, 13, 1, 2, 2, 2, 3, 8, 9, 9, 9, 9, 10, 5, 6, 7, 11, 12, 13, 1, 2, 2, 2, 2, 2, 2, 3, 8, 9, 9, 9, 9, 9, 9, 9, 10, 1, 2, 2, 3, 8, 9, 9, 9, 10, 1, 3, 8, 9, 10, 4, 8, 10, 14],
+            stopper: [3, 4, 7, 10, 13, 14]
         }).create();
 
         var baf = new Pcp({
-          id: "baf",
-          title: "Back & forth",
-          text: 'The pawn has to go to the other side and back. In fact, PCPs can simulate any <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> and we show some more complicated "programs" below.',
-          tiles: [
-            ["start", "#", "#R...#", "#fd5"], // 9758 \u2659
-            ["right", "R.", ".R", "#afa"],
-            ["copy", ".", ".", "#8f8"],
-            ["copy2", "#", "#", "#6f6"],
-            ["turn", "R#", "L#", "#4f4"],
-            ["left", ".L", "L.", "#f0f"],
-            ["finish", "#L...#", "#", "#e0e"]
-          ],
-          map: {
-            'R': PR, // ♙ right
-            'L': PL // ♙ left
-          },
-          start: 0,
-          soln: [0, 1, 2, 2, 3, 2, 1, 2, 3, 2, 2, 1, 3, 2, 2, 2, 4, 2, 2, 5, 3, 2, 5, 2, 3, 5, 2, 2, 6]
+            id: "baf",
+            title: "Back & forth",
+            text: 'The pawn has to go to the other side and back. In fact, PCPs can simulate any <a href="https://en.wikipedia.org/wiki/Turing_machine">Turing machine</a> and we show some more complicated "programs" below.',
+            tiles: [
+                ["start", "#", "#R...#", "#edf8b1"], // 9758 \u2659
+                ["right", "R.", ".R", "#fdd49e"],
+                ["copy", ".", ".", "#fff7ec"],
+                ["copy2", "#", "#", "#fff7ec"],
+                ["turn", "R#", "L#", "#fc8d59"],
+                ["left", ".L", "L.", "#fdbb84"],
+                ["finish", "#L...#", "#", "#edf8b1"]
+            ],
+            map: {
+                'R': PR, // ♙ right
+                'L': PL // ♙ left
+            },
+            start: 0,
+            soln: [0, 1, 2, 2, 3, 2, 1, 2, 3, 2, 2, 1, 3, 2, 2, 2, 4, 2, 2, 5, 3, 2, 5, 2, 3, 5, 2, 2, 6]
         }).create();
 
         var baf2 = new Pcp({
-          id: "baf2",
-          title: "Back and forth and back and forth",
-          tiles: [
-            ["start", "#", "#\u2654\u2659...#", "#fd5"], // 9758 \u2659
-            ["copy", ".", ".", "#8f8"],
-            ["copy2", "\u2654", "\u2654", "#8f8"],
-            ["copy3", "\u265A", "\u265A", "#8f8"],
-            ["copy4", "#", "#", "#6f6"],
-            ["pull", "\u2654\u2659.", ".\u265A\u2659", "#afa"],
-            ["right", "\u2659.", ".\u2659", "#afa"],
-            ["turn", "\u2659#", "\u265F#", "#4f4"],
-            ["left", ".\u265F", "\u265F.", "#f0f"],
-            ["turn2", "\u265A\u265F", "\u2654\u2659", "#f0f"],
-            ["finish", "#...\u2654\u2659#", "#", "#e0e"]
-          ],
-          start: 0,
-          soln: []
-        }).create();
-
-        var power = new Pcp({
-          id: "power",
-          title: "Power of 2",
-          text: "Keep dividing by 2 to check the number of <em>x</em>'s at the beginning is 2<sup><em>k</em></sup>.",
-          tiles: [
-            ["start", "#", "#xxxxxxxxxxxxxxxx#", "#fd5"],
-            ["copy", "#", "#", "#afa"],
-            ["div", "xx", "x", "#8f8"],
-            ["finish", "#x#", "#", "#ffffff"]
-          ],
-         //  map: {"p": "p"};
-          start: 0,
-          soln: [0, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 1, 2, 3]
-         //[0,1,2,2,3,5,6,6,6,7,1,3,5,6,7,4,5,7,8], pre 4
+            id: "baf2",
+            title: "Back and forth and back and forth",
+            tiles: [
+                ["start", "#", "#\u2654\u2659...#", "#fd5"], // 9758 \u2659
+                ["copy", ".", ".", "#8f8"],
+                ["copy2", "\u2654", "\u2654", "#8f8"],
+                ["copy3", "\u265A", "\u265A", "#8f8"],
+                ["copy4", "#", "#", "#6f6"],
+                ["pull", "\u2654\u2659.", ".\u265A\u2659", "#afa"],
+                ["right", "\u2659.", ".\u2659", "#afa"],
+                ["turn", "\u2659#", "\u265F#", "#4f4"],
+                ["left", ".\u265F", "\u265F.", "#f0f"],
+                ["turn2", "\u265A\u265F", "\u2654\u2659", "#f0f"],
+                ["finish", "#...\u2654\u2659#", "#", "#e0e"]
+            ],
+            start: 0,
+            soln: []
         }).create();
 
         var palin = new Pcp({
-          id: "palin",
-          title: "Palindrome",
-          text: "In this PCP, we check that the starting word is a palindrome (reads the same forwards and backwards).",
-          tiles: [
-            ["start", "#", "#Sababa#", "#fd5"],
-            ["copy", "a", "a", "#8f8"],
-            ["copy2", "b", "b", "#8f8"],
-            ["copy4", "#", "#", "#6f6"],
-            ["pick-a", "Sa", "A", "#afa"],
-            ["pick-b", "Sb", "B", "#afa"],
-            ["right-a", "Aa", "aA", "#afa"],
-            ["right-a2", "Ab", "bA", "#afa"],
-            ["right-b", "Ba", "aB", "#afa"],
-            ["right-b2", "Bb", "bB", "#afa"],
-            ["check-a", "aA#", "L#", "#4f4"],
-            ["check-b", "bB#", "L#", "#4f4"],
-            ["turn", "#L", "#S", "#4f4"],
-            ["left", "aL", "La", "#afa"],
-            ["left2", "bL", "Lb", "#afa"],
-            ["finish", "#S#", "#", "#e0e"],
-            ["finish2", "#Sa#", "#", "#e0e"],
-            ["finish3", "#Sb#", "#", "#e0e"]
-          ],
-          map: {
-            'S': WP, // ♙ right
-            'L': PL, // ♙ left
-            'A': WPA,
-            'B': WPB
-          },
-          start: 0,
-          soln: [0, 4, 2, 1, 2, 1, 3, 7, 1, 2, 1, 3, 2, 6, 2, 1, 3, 2, 1, 7, 1, 3, 2, 1, 2, 6, 3, 2, 1, 2, 10, 2, 1, 14, 3, 2, 13, 2, 3, 14, 1, 2, 12, 2, 1, 2, 3, 5, 1, 2, 3, 8, 2, 3, 1, 9, 3, 1, 11, 13, 12, 1, 16],
-          stopper: [3, 15, 16, 17] //,10,11,12,15,16,17],
+            id: "palin",
+            title: "Palindrome",
+            text: "In this PCP, we check that the starting word is a palindrome (reads the same forwards and backwards).",
+            tiles: [
+                ["start", "#", "#Sababa#", "#edf8b1"],
+                ["copy", "a", "a", "#ffffe5"],
+                ["copy2", "b", "b", "#ffffe5"],
+                ["copy4", "#", "#", "#ffffe5"],
+                ["pick-a", "Sa", "A", "#78c679"],
+                ["pick-b", "Sb", "B", "#78c679"],
+                ["right-a", "Aa", "aA", "#d9f0a3"],
+                ["right-a2", "Ab", "bA", "#d9f0a3"],
+                ["right-b", "Ba", "aB", "#d9f0a3"],
+                ["right-b2", "Bb", "bB", "#d9f0a3"],
+                ["check-a", "aA#", "L#", "#78c679"],
+                ["check-b", "bB#", "L#", "#78c679"],
+                ["turn", "#L", "#S", "#addd8e"],
+                ["left", "aL", "La", "#d9f0a3"],
+                ["left2", "bL", "Lb", "#d9f0a3"],
+                ["finish", "#S#", "#", "#edf8b1"],
+                ["finish2", "#Sa#", "#", "#edf8b1"],
+                ["finish3", "#Sb#", "#", "#edf8b1"]
+            ],
+            map: {
+                'S': WP, // ♙ right
+                'L': PL, // ♙ left
+                'A': WPA,
+                'B': WPB
+            },
+            start: 0,
+            soln: [0, 4, 2, 1, 2, 1, 3, 7, 1, 2, 1, 3, 2, 6, 2, 1, 3, 2, 1, 7, 1, 3, 2, 1, 2, 6, 3, 2, 1, 2, 10, 2, 1, 14, 3, 2, 13, 2, 3, 14, 1, 2, 12, 2, 1, 2, 3, 5, 1, 2, 3, 8, 2, 3, 1, 9, 3, 1, 11, 13, 12, 1, 16],
+            stopper: [3, 15, 16, 17] //,10,11,12,15,16,17],
         }).create();
 
         var div = new Pcp({
-          id: "div",
-          title: "Divisibility",
-          text: "Here, we check that the number of <em>d</em>'s divides the number of <em>n</em>'s.",
-          tiles: [
-            ["start", "#", "#Rnnnndd#", "#fd5"],
-            ["copy", "n", "n", "#8f8"],
-            ["copy2", "d", "d", "#8f8"],
-            ["copy3", "N", "N", "#8f8"],
-            ["copy3", "D", "D", "#8f8"],
-            ["copy4", "#", "#", "#6f6"],
-            ["right", "Rn", "nR", "#afa"],
-            ["right2", "Rd", "dR", "#afa"],
-            ["turn", "dR#", "LD#", "#4f4"],
-            ["turn2", "dRD", "LDD", "#4f4"],
-            ["reset", "nRD", "ndC", "#4f4"],
-            ["reset2", "CD", "dC", "#4f4"],
-            ["reset3", "C#", "R#", "#4f4"],
-            ["finish", "NRD", "NFD", "#e0e"],
-            ["left", "dL", "Ld", "#f0f"],
-            ["left2", "nL", "Ln", "#f0f"],
-            ["turn3", "#Ln", "#NR", "#f0f"],
-            ["turn4", "NLn", "NNR", "#f0f"],
-            ["finish2", "FD", "F", "#e0e"],
-            ["finish3", "NF", "F", "#e0e"],
-            ["finish4", "#F#", "#", "#e0e"]
-          ],
-          map: {
-            'R': PR, // ♙ right
-            'L': PL, // ♙ left
-            'C': '\u265F', // ♟
-            'F': '\u2654', // ♔ finish
-            'N': '<span class="crossed">n</span>',
-            'D': '<span class="crossed">d</span>'
-          },
-          start: 0,
-          soln: [0, 6, 1, 1, 1, 2, 2, 5, 1, 6, 1, 1, 2, 2, 5, 1, 1, 6, 1, 2, 2, 5, 1, 1, 1, 6, 2, 2, 5, 1, 1, 1, 1, 7, 2, 5, 1, 1, 1, 1, 2, 7, 5, 1, 1, 1, 1, 2, 8, 1, 1, 1, 1, 14, 4, 5, 1, 1, 1, 15, 2, 4, 5, 1, 1, 15, 1, 2, 4, 5, 1, 15, 1, 1, 2, 4, 5, 15, 1, 1, 1, 2, 4, 16, 1, 1, 1, 2, 4, 5, 3, 6, 1, 1, 2, 4, 5, 3, 1, 6, 1, 2, 4, 5, 3, 1, 1, 6, 2, 4, 5, 3, 1, 1, 1, 7, 4, 5, 3, 1, 1, 1, 9, 5, 3, 1, 1, 15, 4, 4, 5, 3, 1, 15, 1, 4, 4, 5, 3, 15, 1, 1, 4, 4, 5, 17, 1, 1, 4, 4, 5, 3, 3, 6, 1, 4, 4, 5, 3, 3, 1, 6, 4, 4, 5, 3, 3, 1, 10, 4, 5, 3, 3, 1, 1, 2, 11, 5, 3, 3, 1, 1, 2, 2, 12, 3, 3, 1, 1, 2, 8, 3, 3, 1, 1, 14, 4, 5, 3, 3, 1, 15, 2, 4, 5, 3, 3, 15, 1, 2, 4, 5, 3, 17, 1, 2, 4, 5, 3, 3, 3, 6, 2, 4, 5, 3, 3, 3, 1, 7, 4, 5, 3, 3, 3, 1, 9, 5, 3, 3, 3, 15, 4, 4, 5, 3, 3, 17, 4, 4, 5, 3, 3, 3, 13, 4, 5, 3, 3, 3, 3, 18, 4, 5, 3, 3, 3, 3, 18, 5, 3, 3, 3, 19, 5, 3, 3, 19, 5, 3, 19, 5, 19, 20],
-          stopper: [5, 20]
+            id: "div",
+            title: "Divisibility",
+            text: "Here, we check that the number of <em>d</em>'s divides the number of <em>n</em>'s.",
+            tiles: [
+                ["start", "#", "#Rnnnndd#", "#f768a1"],
+                ["copy", "n", "n", "#fff7f3"],
+                ["copy2", "d", "d", "#fff7f3"],
+                ["copy3", "N", "N", "#fff7f3"],
+                ["copy3", "D", "D", "#fff7f3"],
+                ["copy4", "#", "#", "#fff7f3"],
+                ["right", "Rn", "nR", "#fde0dd"],
+                ["right2", "Rd", "dR", "#fde0dd"],
+                ["turn", "dR#", "LD#", "#fcc5c0"],
+                ["turn2", "dRD", "LDD", "#fcc5c0"],
+                ["reset", "nRD", "ndC", "#fa9fb5"],
+                ["reset2", "CD", "dC", "#fa9fb5"],
+                ["reset3", "C#", "R#", "#fa9fb5"],
+                ["finish", "NRD", "NFD", "#f768a1"],
+                ["left", "dL", "Ld", "#fde0dd"],
+                ["left2", "nL", "Ln", "#fde0dd"],
+                ["turn3", "#Ln", "#NR", "#fcc5c0"],
+                ["turn4", "NLn", "NNR", "#fcc5c0"],
+                ["finish2", "FD", "F", "#f768a1"],
+                ["finish3", "NF", "F", "#f768a1"],
+                ["finish4", "#F#", "#", "#f768a1"]
+            ],
+            map: {
+                'R': PR, // ♙ right
+                'L': PL, // ♙ left
+                'C': '\u265F', // ♟
+                'F': '\u2654', // ♔ finish
+                'N': '<span class="crossed">n</span>',
+                'D': '<span class="crossed">d</span>'
+            },
+            start: 0,
+            soln: [0, 6, 1, 1, 1, 2, 2, 5, 1, 6, 1, 1, 2, 2, 5, 1, 1, 6, 1, 2, 2, 5, 1, 1, 1, 6, 2, 2, 5, 1, 1, 1, 1, 7, 2, 5, 1, 1, 1, 1, 2, 7, 5, 1, 1, 1, 1, 2, 8, 1, 1, 1, 1, 14, 4, 5, 1, 1, 1, 15, 2, 4, 5, 1, 1, 15, 1, 2, 4, 5, 1, 15, 1, 1, 2, 4, 5, 15, 1, 1, 1, 2, 4, 16, 1, 1, 1, 2, 4, 5, 3, 6, 1, 1, 2, 4, 5, 3, 1, 6, 1, 2, 4, 5, 3, 1, 1, 6, 2, 4, 5, 3, 1, 1, 1, 7, 4, 5, 3, 1, 1, 1, 9, 5, 3, 1, 1, 15, 4, 4, 5, 3, 1, 15, 1, 4, 4, 5, 3, 15, 1, 1, 4, 4, 5, 17, 1, 1, 4, 4, 5, 3, 3, 6, 1, 4, 4, 5, 3, 3, 1, 6, 4, 4, 5, 3, 3, 1, 10, 4, 5, 3, 3, 1, 1, 2, 11, 5, 3, 3, 1, 1, 2, 2, 12, 3, 3, 1, 1, 2, 8, 3, 3, 1, 1, 14, 4, 5, 3, 3, 1, 15, 2, 4, 5, 3, 3, 15, 1, 2, 4, 5, 3, 17, 1, 2, 4, 5, 3, 3, 3, 6, 2, 4, 5, 3, 3, 3, 1, 7, 4, 5, 3, 3, 3, 1, 9, 5, 3, 3, 3, 15, 4, 4, 5, 3, 3, 17, 4, 4, 5, 3, 3, 3, 13, 4, 5, 3, 3, 3, 3, 18, 4, 5, 3, 3, 3, 3, 18, 5, 3, 3, 3, 19, 5, 3, 3, 19, 5, 3, 19, 5, 19, 20],
+            stopper: [5, 20]
         }).create();
     </script>
-  </body>
-  </html>
+</body>
+
+</html>
