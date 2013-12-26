@@ -46,6 +46,7 @@ class Pcp
         @seq = []
         @soln = spec.soln
         @stopper = spec.stopper
+        @inputonly = spec.inputonly
         @ts = "" # top string
         @bs = "" # bottom string
 
@@ -106,7 +107,7 @@ class Pcp
             # @bot.scrollLeft(sum)
             @seq.push(i)
             if @ts.length == @bs.length
-                alert('Congratulations, you found a solution of length ' + @seq.length + '.')  # + ".\n" + @seq)
+                alert('Congratulations, you have found a solution of length ' + @seq.length + '.')  # + ".\n" + @seq)
         else
             alert('Mismatch')
         @possible()
@@ -149,7 +150,7 @@ class Pcp
             for i in [MAX * r ... Math.min(MAX * (r + 1), n)] by 1
               do (i) =>
                 row_buttons.append( $("<td class='dnamecell' />").append(
-                     $("<input type='button' class='dname' id='#{@id}-#{i}' value='#{@tiles[i][0]}'>")
+                    $("<input type='button' class='dname' id='#{@id}-#{i}' value='#{@tiles[i][0]}'>")
                         .click(() => @append(i))
                 )) # onMouseOver='#{@id}.show(#{i});' onMouseOut='#{@id}.hide();'
                 row_tiles.append("""
@@ -161,6 +162,13 @@ class Pcp
                     </td>
                 """)
             table.append(row_buttons, row_tiles, "<tr class='spacer'></tr>")
+
+        if @inputonly
+            e.append(table)
+            @ts = "a"  # a hacky way of disabling all buttons
+            @bs = "b"
+            @possible()
+            return
 
         # UNDO & RESTART & HINT
         buttons = $('<div/>')

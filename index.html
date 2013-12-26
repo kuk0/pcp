@@ -4,8 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    
+    <meta name="description" content="PCP is a simple-looking puzzle involving domino-like tiles which we should put together so that the words spelled out on the top and bottom are the same. Well, it turns out that this puzzle is much much harder than it seems...">
+    <meta name="author" content="Kubo Kováč">
+
+    <meta property="og:url" content="http://people.ksp.sk/~kuko/pcp/" />
+    <meta property="og:title" content="Post correspondence problem" />
+    <meta property="og:description" content="PCP is a simple-looking puzzle involving domino-like tiles which we should put together so that the words spelled out on the top and bottom are the same. Well, it turns out that this puzzle is much much harder than it seems..." />
+    <meta property="og:image" content="http://people.ksp.sk/~kuko/img/pcp.png"/>
 
     <title>Post correspondence problem</title>
 
@@ -17,6 +23,12 @@
     <style>
         body {
             margin-top: 60px;
+        }
+
+        p.note {
+            margin-left: 2em;
+            margin-right: 2em;
+            font-size: smaller;
         }
     </style>
 
@@ -31,16 +43,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <!--li><a href="#intro">Introduction</a></li-->
-                    <li><a href="#easy">Easy instances</a>
-                    </li>
-                    <li><a href="#hard">Hard instances</a>
-                    </li>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#easy">Easy instances</a></li>
+                    <!--li><a href="#medium">Medium instances</a></li-->
+                    <li><a href="#hard">Hard instances</a></li>
                     <!--li><a href="#undecidable">Undecidability</a></li-->
-                    <li><a href="#turing">PCP and Turing machines</a>
-                    </li>
-                    <li><a href="#ram">PCP and RAMs</a>
-                    </li>
+                    <li><a href="#turing">PCP and Turing machines</a></li>
+                    <li><a href="#ram">PCP and RAMs</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -51,15 +60,64 @@
     <div class="container">
 
         <div class="row col-md-12">
-            <!--a id="intro"></a><h1 class="page-header">Introduction</h1>
-        <p>
-          The Post correspondence problem is an undecidable decision problem that was introduced by Emil Post in 1946. Because it is simpler than the halting problem and the Entscheidungsproblem it is often used in proofs of undecidability.
+            <a id="intro"></a><h1 class="page-header">Introduction</h1>
+            
+            <p>
+            <!--The Post correspondence problem is an undecidable decision problem that was introduced by Emil Post in 1946. Because it is simpler than the halting problem and the Entscheidungsproblem it is often used in proofs of undecidability.-->
+                Consider the following puzzle:
+                We are given a set of domino-like tiles. Let's say we have dominoes of 4 types:
+            </p>
+            <center><div class="problem" id="example"></div></center>
+            <p>
+                and there is an unlimited number of tiles of each type.
+                Each tile has two words written on it &ndash; the top and the bottom one.
+                The problem is: Can we arrange the tiles in a sequence so that the word spelled on the top
+                is the same as the word on the bottom?
+            </p>
+            <p>
+                In our simple example, this is indeed possible, and we can arrange the tiles like this
+            </p>
+            <div class="problem" id="example-out"></div>
+            <p>
+                so that both top and bottom row spells "<code>bababaababb</code>".
+            </p>
 
-          Consider the following puzzle:
-          You are given a set of tiles
+            <p class="note">
+                For the formalists: by "word" we mean a finite sequence of symbols. Each tile is a pair of words
+                (<var>top</var>, <var>bottom</var>) and the problem is, given a set of tiles
+                {(<var>u</var><sub>1</sub>, <var>v</var><sub>1</sub>), (<var>u</var><sub>2</sub>, <var>v</var><sub>2</sub>),
+                ..., (<var>u</var><sub>k</sub>, <var>v</var><sub>k</sub>)},
+                is there a finite sequence <var>i</var><sub>1</sub>,...,<var>i</var><sub>n</sub> such that
+                <var>u</var><sub><var>i</var><sub>1</sub></sub>
+                <var>u</var><sub><var>i</var><sub>2</sub></sub>
+                ... 
+                <var>u<sub>i<sub>n</sub></sub></var>
+                =
+                <var>v</var><sub><var>i</var><sub>1</sub></sub>
+                <var>v</var><sub><var>i</var><sub>2</sub></sub>
+                ... 
+                <var>v<sub>i<sub>n</sub></sub></var>?
+            </p>
 
-        </p-->
+            <p>
+                Our second example:
+            </p>
+            <div class="problem" id="example2"></div>
+            <p>
+                doesn't have solution (you can try it out by clicking buttons 1., 2., 3.).
+                We can only start with tile 1 producing an extra <code>b</code> at the top.
+                Then we can only continue with tile 2. There will be an extra <code>c</code> at the bottom, so we can only
+                continue with tile 3, but this will create an extra <code>b</code> at the top again.
+                So there will always be an extra letter at either top or bottom.
+            </p>
 
+            <p>
+
+            </p>
+            <p class="note">
+                The problem is named after Emil Post, who introduced it in 1946, and proved it is <em>undecidable</em>,
+                i.e., you cannot write a computer program that correctly solves any instance of problem.
+            </p>
 
             <a id="easy"></a>
             <h1 class="page-header">Easy instances</h1>
@@ -70,10 +128,13 @@
             <div class="problem" id="easy4"></div>
             <div class="problem" id="easy5"></div>
 
+            <!--a id="medium"></a>
+            <h1 class="page-header">Medium instances</h1>
+
+            <div class="problem" id="medium1"></div-->
+
             <a id="hard"></a>
             <h1 class="page-header">Hard instances</h1>
-            <!--p>
-        </p-->
 
             <div class="problem" id="hard3"></div>
             <div class="problem" id="hard2"></div>
@@ -107,6 +168,40 @@
     <script src="../js/bootstrap.js"></script>
     <script src="pcp.js"></script>
     <script>
+        var example = new Pcp({
+            id: "example",
+            tiles: [
+                ["1.", "b", "ba", "#74a9cf"],
+                ["2.", "a", "ba", "#f1eef6"],
+                ["3.", "aba", "ab", "#d0d1e6"],
+                ["4.", "bb", "b", "#a6bddb"]
+            ],
+            inputonly: true
+        }).create();
+
+        var out = new Pcp({
+            id: "example-out",
+            tiles: [
+                ["1.", "b", "ba", "#74a9cf"],
+                ["2.", "a", "ba", "#f1eef6"],
+                ["1.", "b", "ba", "#74a9cf"],
+                ["3.", "aba", "ab", "#d0d1e6"],
+                ["3.", "aba", "ab", "#d0d1e6"],
+                ["4.", "bb", "b", "#a6bddb"]
+            ],
+            inputonly: true
+        }).create();
+
+        var example2 = new Pcp({
+            id: "example2",
+            tiles: [
+                ["1.", "ab", "a", "#ffffcc"],
+                ["2.", "a", "bac", "#a1dab4"],
+                ["3.", "cab", "a", "#41b6c4"]
+            ],
+            //inputonly: true
+        }).create();
+
         var easy1 = new Pcp({
             id: "easy1",
             title: "Easy #1",
@@ -168,6 +263,21 @@
                 ["3.", "b", "aa", "#a1dab4"]
             ],
             soln: [0, 2, 0, 0, 2, 1, 1]
+        }).create();
+
+        var medium1 = new Pcp({
+            id: "medium1",
+            title: "Random",
+            //text: '',
+            tiles: [
+                ["1.", "a", "ab", "#f768a1"],
+                ["2.", "b", "cc", "#fa9fb5"],
+                ["3.", "c", "b", "#fcc5c0"],
+                ["4.", "c", "d", "#feebe2"],
+                ["5.", "ddddd", "", "#f768a1"],
+                ["6.", "ddde", "e", "#fa9fb5"],
+            ],
+            // soln: []
         }).create();
 
         var hard3 = new Pcp({
